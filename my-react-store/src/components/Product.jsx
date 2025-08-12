@@ -1,6 +1,6 @@
-// Product.jsx
 import React from 'react';
 import QuantityPicker from './QuantityPicker';
+import "./Product.css";
 
 function Product({ name, price, description, imageUrl }) {
   const handleQuantityChange = (newQuantity) => {
@@ -12,7 +12,7 @@ function Product({ name, price, description, imageUrl }) {
       <img src={imageUrl} alt={name} className="product-image" />
       <h3>{name}</h3>
       <p>{description}</p>
-      <span>{price}</span>
+      <span>${parseFloat(price).toFixed(2)}</span>
       <QuantityPicker onQuantityChange={handleQuantityChange} />
       <button>Add to Cart</button>
     </div>

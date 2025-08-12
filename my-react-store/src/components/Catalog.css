@@ -1,0 +1,16 @@
+.catalog {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog h2 {
+    color: darkcyan;
+}
+
+.catalog p {
+    font-weight: bold;
+}
+
+.catalog .product-list {
+    display: flex;
+}

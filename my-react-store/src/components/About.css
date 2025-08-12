@@ -1,0 +1,25 @@
+.about {
+    display: flex;
+    align-items: center; /* vertically center image & text */
+    gap: 20px; /* space between text and image */
+    background-color: #ced9da;
+    padding: 30px;
+}
+
+.about p {
+    color: skyblue;
+}
+
+.about h3 {
+    color: #333;
+}
+
+.about h1 {
+    color: darkcyan;
+}
+
+.about img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
