@@ -1,0 +1,24 @@
+.header {
+    border-bottom: 1px solid #adaeaf;
+    padding-bottom: 10px;
+}
+
+.header .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.header .menu-item {
+    padding: 5px 10px;
+    background-color: #b9c2cb;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.header .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

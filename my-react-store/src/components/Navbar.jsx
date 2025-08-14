@@ -1,6 +1,7 @@
-// imports
+import "./Navbar.css"
 
-// logic
+import { Link, Links } from 'react-router-dom';
+
 function Header() {
   return (
     <header className="header">
@@ -10,17 +11,25 @@ function Header() {
           <p>Discover incredible products at unbeatable prices</p>
         </div>
         <div className="header-actions">
-          <div className="search-bar">
+          <ul className="menu">
+            <li className="menu-item"><Link to="/FSDI107/my-react-store/home">Home</Link></li>
+            <li className="menu-item"><Link to="/FSDI107/my-react-store/catalog">Catalog</Link></li>
+            <li className="menu-item"><Link to="/FSDI107/my-react-store/about">About</Link></li>
+            <li className="menu-item"><Link to="/FSDI107/my-react-store/contact">Contact</Link></li>
+          </ul>
+          {/* <div className="search-bar">
             <input
               type="text"
               placeholder="Search products..."
               className="search-input"
             />
             <button className="search-button">🔍</button>
-          </div>
+          </div> */}
           <div className="cart-icon">
+            <Link to="/FSDI107/my-react-store/cart" className="menu-item">
             <span className="cart-symbol">🛒</span>
             <span className="cart-count">0</span>
+            </Link>           
           </div>
         </div>
       </div>
