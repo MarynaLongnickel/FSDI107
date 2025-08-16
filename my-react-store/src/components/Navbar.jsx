@@ -16,6 +16,7 @@ function Header() {
             <li className="menu-item"><Link to="/FSDI107/my-react-store/catalog">Catalog</Link></li>
             <li className="menu-item"><Link to="/FSDI107/my-react-store/about">About</Link></li>
             <li className="menu-item"><Link to="/FSDI107/my-react-store/contact">Contact</Link></li>
+            <li className="menu-item"><Link to="/FSDI107/my-react-store/admin">Admin</Link></li>
           </ul>
           {/* <div className="search-bar">
             <input
