@@ -3,11 +3,13 @@ import { useState } from 'react';
 
 function Admin() {
 
+    const [couponsList, setCouponList] = useState([]);
     const [coupon, setCoupon] = useState({
         code: "",
         discount: ""
     });
 
+    const [productsList, setProductsList] = useState([]);
     const [product, setProduct] = useState({
         title: "",
         price: "",
@@ -16,6 +18,9 @@ function Admin() {
 
     function save() {
         console.log(coupon);
+        let copy = [ ...couponsList ];
+        copy.push(coupon);
+        setCouponList(copy);
     }
 
     function handleEvent(e) {
@@ -46,6 +51,9 @@ function Admin() {
 
     function saveProduct() {
         console.log(product);
+        let copy = [...productsList];
+        copy.push(product);
+        setProductsList(copy);
     }
 
     return (
@@ -84,6 +92,19 @@ function Admin() {
                             className="btn btn-sm btn-primary"
                             onClick={saveProduct}>Save
                         </button>
+
+                        {/* Display saved products */}
+                        <div>
+                            <h4>Your saved products:</h4>
+                            <ul>
+                                {productsList.map((p, index) => (
+                                    <li key={index}>
+                                        {p.title} - ${p.price} 
+                                        {p.image && <img src={p.image} alt={p.title} width="50" style={{marginLeft:"10px"}} />}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -92,30 +113,41 @@ function Admin() {
                     <div className="discounts">
                         <h3>Discount Codes</h3>
                         <div className="form-field">
-                            <label className="form-label">Code: </label>
-                            <input
-                                className="form-control"
-                                type="text"
-                                name="code"
-                                onBlur={handleEvent}
-                            />
+                        <label className="form-label">Code: </label>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="code"
+                            onBlur={handleEvent}
+                        />
                         </div>
                         <div className="form-field">
-                            <label className="form-label">Discount: </label>
-                            <input
-                                className="form-control"
-                                type="number"
-                                name="discount"
-                                onBlur={handleEvent}
-                            />
+                        <label className="form-label">Discount: </label>
+                        <input
+                            className="form-control"
+                            type="number"
+                            name="discount"
+                            onBlur={handleEvent}
+                        />
                         </div>
 
+                        {/* Save button */}
                         <button
-                            className="btn btn-sm btn-primary"
-                            onClick={save}
+                        className="btn btn-sm btn-primary"
+                        onClick={save}
                         >
-                            Save
+                        Save
                         </button>
+
+                        {/* Display saved discounts BELOW the button */}
+                        <div>
+                        <h4>Your saved discounts:</h4>
+                        <ul>
+                            {couponsList.map((cp, index) => (
+                            <li key={index}>{cp.code} - ${cp.discount}</li>
+                            ))}
+                        </ul>
+                        </div>
                     </div>
                 </section>
             </div>

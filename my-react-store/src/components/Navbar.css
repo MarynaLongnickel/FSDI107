@@ -17,6 +17,16 @@
     border-radius: 4px;
 }
 
+.header .menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header .cart-icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header .header-actions {
     display: flex;
     align-items: center;

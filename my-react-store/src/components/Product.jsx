@@ -7,14 +7,22 @@ function Product({ name, price, description, imageUrl }) {
     console.log(`Updated quantity for ${name}: ${newQuantity}`);
   };
 
+  const handleAddToCart = () => {
+    console.log(`Added ${name} to cart!`);
+  };
+
   return (
     <div className="product-card">
       <img src={imageUrl} alt={name} className="product-image" />
       <h3>{name}</h3>
       <p>{description}</p>
       <span>${parseFloat(price).toFixed(2)}</span>
+      
       <QuantityPicker onQuantityChange={handleQuantityChange} />
-      <button>Add to Cart</button>
+      
+      <button className="add-to-cart-btn" onClick={handleAddToCart}>
+        Add to Cart
+      </button>
     </div>
   );
 }

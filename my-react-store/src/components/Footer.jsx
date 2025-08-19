@@ -1,3 +1,6 @@
+
+import './Footer.css'; // link the css file
+
 function Footer() {
   return (
     <footer className="footer">
@@ -12,15 +15,13 @@ function Footer() {
               <li><a href="#returns">Returns & Exchanges</a></li>
             </ul>
           </div>
-          <div className="footer-section">
-            <h4>Contact Info</h4>
-            <p>📧 support@mystore.com</p>
-            <p>📞 1-800-MYSTORE</p>
-            <p>📍 123 Commerce St, City, State 12345</p>
-          </div>
         </div>
+
         <div className="footer-bottom">
-          <p>&copy; 2025 My Online Store. All rights reserved.</p>
+          <span>📧 support@mystore.com</span>
+          <span>📞 1-800-MYSTORE</span>
+          <span>📍 123 Commerce St, City, State 12345</span>
+          <span>© 2025 My Online Store. All rights reserved.</span>
         </div>
       </div>
     </footer>

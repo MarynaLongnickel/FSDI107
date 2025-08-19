@@ -23,18 +23,13 @@
 .footer-section {
   flex: 1;
   min-width: 220px;
+  text-align: center;
 }
 
 .footer-section h4 {
   margin-bottom: 12px;
   font-weight: bold;
   color: #fff;
-}
-
-.footer-section p {
-  margin: 6px 0;
-  font-size: 14px;
-  color: #ccc;
 }
 
 .footer-links {
@@ -45,6 +40,7 @@
 
 .footer-links li {
   margin-bottom: 8px;
+  list-style: none;
 }
 
 .footer-links a {
@@ -58,8 +54,10 @@
 }
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 13px;
   color: #999;
+  padding-top: 15px;
 }
