@@ -1,8 +1,14 @@
 .home {
     background-color: #eff0f1;
-    padding: 20px;
+    padding: 0;
 }
 
 .home h1 {
     color: darkcyan;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+    margin: 0;
 }
